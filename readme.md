@@ -10,7 +10,7 @@
 - buttonSize: **type: String** fungsinya untuk memberi ukuran button
 
 # Data
--isPressed: false
+- isPressed: false
 
 # Methods
 - toggleClick fungsinya mengubah nilai var **isPresed** ke nilai selain yang sedang terkandung
