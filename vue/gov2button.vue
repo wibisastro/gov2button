@@ -2,7 +2,7 @@
 <div class="control">
     <a class="button is-block is-primary" @click="toggleClick" :class="{ 'is-warning': isPressed, 'is-large': buttonSize=='large' }" >
         <span class="icon">
-          <i :class="{'fa fa-minus': isPressed}" class="fa fa-plus"></i>
+            <i :class="{'fa fa-minus': isPressed}" class="fa fa-plus"></i>
         </span>
         <span>{{ buttonLabel }}</span>
     </a>

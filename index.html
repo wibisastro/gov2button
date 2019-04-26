@@ -1,89 +1,87 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gov 2 Button</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://api.kl2.web.id/css/bulma.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <script src="https://api.kl2.web.id/js/httpVueLoader.js"></script>
-    <script src="https://api.kl2.web.id/js/axios.min.js"></script>
-    <script type="text/javascript">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gov 2 Button</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://api.kl2.web.id/css/bulma.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+        <script src="https://api.kl2.web.id/js/httpVueLoader.js"></script>
+        <script src="https://api.kl2.web.id/js/axios.min.js"></script>
+        <script type="text/javascript">
         const eventBus = new Vue();
-    </script>
-  </head>
-  <body>
-<div id="app">
-    <section class="hero is-primary">
-    	<div> </div>
-    </section>
-        
-    <section class="section">
-        <div class="container">
-            <div class="columns">
-              <div class="column is-narrow">
-                <div style="width: 200px;"></div>
-              </div>
-              <div class="column">
-                <h1 class="title">Button Component</h1>
-        
-                <div class="field is-horizontal">
-                  <div class="field-body">
-                    <div class="field is-grouped is-grouped-right">
-                        <gov2button button-label="Klik Saya!"></gov2button>
-                    </div>
-                  </div>
-                </div>
-        
-	       
-                <div>
-                    <div class="field is-horizontal">
-                      <div class="field-label is-normal">
-                          <label class="label">isPressed</label>
-                      </div>
-                      <div class="field-body">
-                        <div v-text="isPressed" class="field box"></div>
-                      </div>
-                    </div>
-                </div>	              
-               </div>
-            </div>
-        </div>
-    </section>
+        </script>
+    </head>
+    <body>
+        <div id="app">
+            <section class="hero is-primary">
+                <div></div>
+            </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="content has-text-centered">
-            	<p>
-                   <strong>Gov 2.0</strong> by Cyber Gov Labs. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. 
-                    </p>
+            <section class="section">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column is-narrow">
+                            <div style="width: 200px;"></div>
+                        </div>
+                        <div class="column">
+                            <h1 class="title">Button Component</h1>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field is-grouped is-grouped-right">
+                                        <gov2button button-label="Klik Saya!"></gov2button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-normal">
+                                        <label class="label">isPressed</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div v-text="isPressed" class="field box"></div>
+                                    </div>
+                                </div>
+                            </div>	              
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="content has-text-centered">
+                        <p>
+                            <strong>Gov 2.0</strong> by Cyber Gov Labs. The source code is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. 
+                        </p>
+                    </div>
+                </div>
+            </footer>
         </div>
-      </div>
-    </footer>
-</div>
- 
- <script type="text/javascript">
-  new Vue({
-	    el: '#app',
-        components: {
-	          'gov2button': httpVueLoader('vue/gov2button.vue'),
-	           },
-        data () {
-            return {
-                isPressed:false,
-            }
-        },
-        methods: {
-            toggleClick: function(data) {
-                this.isPressed=data;
-            },
-        },
-        created: function () {
-            eventBus.$on("toggleClick", this.toggleClick);
-        },
-  });
-</script>
- 
-  </body>
+
+        <script type="text/javascript">
+            new Vue({
+                el: '#app',
+                components: {
+                    'gov2button': httpVueLoader('vue/gov2button.vue'),
+                },
+                data () {
+                    return {
+                        isPressed: false,
+                    }
+                },
+                methods: {
+                    toggleClick: function(data) {
+                        this.isPressed=data;
+                    },
+                },
+                created: function () {
+                    eventBus.$on("toggleClick", this.toggleClick);
+                },
+            });
+        </script>
+
+    </body>
 </html>
